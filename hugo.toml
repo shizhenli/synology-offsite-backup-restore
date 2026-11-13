@@ -1,13 +1,33 @@
 baseURL = "https://synology-offsite-backup-restore.pages.dev/"
 languageCode = "en-us"
-title = "Synology Offsite Backup & Restore"
+title = "Synology Offsite Backup Restore"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 [params]
-template_version = "v1.1.0"
-description = "Configure and actually test a Synology offsite backup, including a sample restore."
-category = "HomeLab"
 source = "synology-offsite-backup-restore"
+description = "Remote help configuring a Synology offsite backup and proving a sample file can be restored."
 email = "hello@handytasklab.com"
+fallback_email_subject = "Synology offsite backup help"
+fallback_email_fields = ["Synology models/DSM versions", "Backup tool and destination", "Protected folders", "Sample restore result"]
+og_image = "images/social.jpg"
+footer_line = "Remote help for one device at a time."
+latest_kicker = "FROM THE BLOG"
+latest_title = "Synology Offsite Backup Restore Guides"
+theme_bg = "#253547"
+theme_surface = "#F0F1F2"
+theme_card = "#FFFFFF"
+theme_ink = "#182018"
+theme_muted = "#5D655F"
+theme_accent = "#FFD08A"
+theme_accent_ink = "#151515"
+theme_deep = "#1D2937"
+theme_deep_ink = "#FFFFFF"
+theme_header_ink = "#FFFFFF"
+theme_line = "#CDD0CF"
+theme_link = "#FFD698"
+theme_scrim = "rgba(8,12,16,0.86)"
+theme_light = false
+hero_desktop_hd_width = 1920
+hero_mobile_hd_width = 768
 [markup.goldmark.renderer]
 unsafe = true

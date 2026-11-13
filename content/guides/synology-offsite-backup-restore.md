@@ -1,17 +1,44 @@
-﻿---
-title: "Synology Backup Success Is Not a Restore Test"
-description: "A practical first-pass check for Synology Offsite Backup & Restore."
-date: 2026-11-13
-draft: true
 ---
-<p>A backup job is only a copy until a restore is proven. I test a sample file and document the exact recovery path.</p>
-<h2>1. Reproduce the exact failure</h2>
-<p>Write down what works, what does not, and the last change. Test from the same device and network where the problem happens. A second device is useful only as a comparison, not as proof.</p>
-<h2>2. Check the layer before the app</h2>
-<p>Confirm the host is reachable, the account or device is allowed, and the local client can see the service. Then test the app setting. Changing three layers at once makes the result impossible to interpret.</p>
-<h2>3. Make one change and retest</h2>
-<p>Record the old value, apply one change, retest, and keep the result. If the change does not fix it, roll it back before trying the next path.</p>
-<h2>4. Handover test</h2>
-<p>Repeat the successful test after a restart or reconnect. A fix that only works in the current session is not ready for handover.</p>
-<p><a href="/">Back to the service page</a> 路 <a href="mailto:hello@handytasklab.com?subject=Synology%20Offsite%20Backup%20&%20Restore%20question&body=Source%3A%20synology-offsite-backup-restore">Ask about this exact symptom</a></p>
+title: 'Synology Offsite Backup: Restore a Sample and Verify It'
+description: Turn a green Synology backup status into evidence by restoring a sample and checking content, dates, and permissions.
+seo_title: Synology Backup Verification by Sample Restore
+seo_description: Turn a green Synology backup status into evidence by restoring a sample and checking content, dates, and permissions.
+keywords:
+- synology offsite backup restore
+- synology backup verify
+- hyper backup restore test
+date: '2026-11-13'
+draft: false
+categories:
+- Backup & Restore
+category_slug: backup-restore
+---
 
+<p>A Synology backup task can complete while the restore path is broken or the scope is wrong. Restore a small sample to a separate folder and inspect it.</p>
+<h2>Before you start</h2><ul>
+<li>Synology source and offsite destination</li>
+<li>Access to Hyper Backup or the configured backup tool</li>
+<li>One sample folder with known files</li>
+<li>Free space for a separate restore</li>
+</ul>
+<h2>Step-by-step checks</h2>
+<h3>Step 1: Write the protected scope</h3>
+<p>List the shared folders and applications in the task. Confirm the sample you will restore is inside that scope and has a known file count.</p>
+<p><strong>Check:</strong> The sample path is explicitly covered by the backup task.</p>
+<h3>Step 2: Verify the destination</h3>
+<p>Open the remote destination and confirm the latest version exists. Check free space and that the remote device is not the same failing volume.</p>
+<p><strong>Check:</strong> The destination is reachable and has a recent version.</p>
+<h3>Step 3: Restore to a new folder</h3>
+<p>Use the restore wizard to restore the sample to a new location. Do not restore over the live share or select the whole volume for the first test.</p>
+<p><strong>Check:</strong> The restore completes without overwriting live data.</p>
+<h3>Step 4: Compare contents and metadata</h3>
+<p>Count files, open several types, and compare modification dates and permissions with the source. Note missing or changed items.</p>
+<p><strong>Check:</strong> Every sample file is present and readable.</p>
+<h3>Step 5: Record the recovery point</h3>
+<p>Write down the version timestamp, restore path, and result. Repeat the restore after a new backup only if the first test exposes a gap.</p>
+<p><strong>Check:</strong> The handover note identifies a known-good recovery point.</p>
+<h2>Verify the result</h2>
+<p>The sample restores to a separate folder, opens correctly, and matches the source count and key metadata. The tested version timestamp is recorded.</p>
+<h2>Rollback</h2>
+<p>Remove only the separate restore folder after verification. Keep the backup versions and the live share untouched.</p>
+<p><a href="/#consult">Ask for help with this exact symptom</a> · <a href="/guides/">All troubleshooting guides</a></p>
