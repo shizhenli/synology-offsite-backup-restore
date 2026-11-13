@@ -1,7 +1,7 @@
 baseURL = "https://synology-offsite-backup-restore.pages.dev/"
 languageCode = "en-us"
 title = "Synology Offsite Backup Restore"
-enableRobotsTXT = true
+enableRobotsTXT = false
 disableKinds = ["taxonomy", "term"]
 [params]
 source = "synology-offsite-backup-restore"
