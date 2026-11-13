@@ -2,7 +2,9 @@ baseURL = "https://synology-offsite-backup-restore.pages.dev/"
 languageCode = "en-us"
 title = "Synology Offsite Backup & Restore"
 enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
 [params]
+template_version = "v1.1.0"
 description = "Configure and actually test a Synology offsite backup, including a sample restore."
 category = "HomeLab"
 source = "synology-offsite-backup-restore"
