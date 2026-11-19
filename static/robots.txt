@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://synology-offsite-backup-restore.pages.dev/sitemap.xml
+
+Sitemap: https://synology-backup.handytasklab.com/sitemap.xml
