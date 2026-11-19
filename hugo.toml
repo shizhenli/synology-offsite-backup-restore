@@ -1,4 +1,4 @@
-baseURL = "https://synology-offsite-backup-restore.pages.dev/"
+baseURL = "https://synology-backup.handytasklab.com/"
 languageCode = "en-us"
 title = "Synology Offsite Backup Restore"
 enableRobotsTXT = false
